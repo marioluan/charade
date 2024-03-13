@@ -1,133 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psychologist Professional</title>
-  <style>
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #FFFFFF; /* White */
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      background-color: #F5B1C8; /* Pink */
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #FFFFFF; /* White */
-      font-weight: bold;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    h2 {
-      color: #FFC700; /* Golden */
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    footer {
-      background-color: #F5B1C8; /* Pink */
-      padding: 10px;
-      text-align: center;
-      color: #FFFFFF; /* White */
-    }
-
-    /* Media Queries for Responsive Design */
-    @media (max-width: 600px) {
-      nav ul {
-        display: block;
-        text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+      /* Global Styles */
+      * {
+          box-sizing: border-box;
       }
-
-      nav ul li {
-        margin: 10px 0;
+      
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
       }
-    }
-  </style>
+      
+      /* Header Styles */
+      
+      header {
+          background-color: #f4f4f4;
+          padding: 20px;
+          text-align: center;
+      }
+      
+      header nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+      }
+      
+      header nav li {
+          display: inline-block;
+          margin-right: 20px;
+      }
+      
+      header nav a {
+          color: #333;
+          text-decoration: none;
+      }
+      
+      header nav a:hover {
+          color: #c5c5c5;
+      }
+      
+      /* Main Styles */
+      
+      main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+      }
+      
+      /* Hero Section Styles */
+      
+      #hero {
+          background-image: url("https://via.placeholder.com/1920x1080");
+          background-size: cover;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      
+      #hero h1 {
+          font-size: 60px;
+          margin-bottom: 20px;
+      }
+      
+      #hero p {
+          font-size: 24px;
+          margin-bottom: 40px;
+      }
+      
+      #hero button {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+      #hero button:hover {
+          background-color: #c5c5c5;
+      }
+      
+      /* About Section Styles */
+      
+      #about {
+          background-color: #f4f4f4;
+          padding: 40px;
+          text-align: center;
+      }
+      
+      #about h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+      
+      #about p {
+          font-size: 24px;
+          line-height: 1.5;
+          margin-bottom: 40px;
+      }
+      
+      /* Services Section Styles */
+      
+      #services {
+          background-color: #fff;
+          padding: 40px;
+          text-align: center;
+      }
+      
+      #services h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+      
+      #services ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+      }
+      
+      #services li {
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+      
+      /* Contact Section Styles */
+      
+      #contact {
+          background-color: #f4f4f4;
+          padding: 40px;
+          text-align: center;
+      }
+      
+      #contact h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+      }
+      
+      #contact form {
+          max-width: 400px;
+          margin: 0 auto;
+      }
+      
+      #contact label {
+          display: block;
+          margin-bottom: 10px;
+      }
+      
+      #contact input,
+      #contact textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+      }
+      
+      #contact input[type="submit"] {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+      #contact input[type="submit"]:hover {
+          background-color: #c5c5c5;
+      }
+      
+      /* Footer Styles */
+      
+      footer {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+      }
+      
+      footer p {
+          margin-bottom: 0;
+      }
+    </style>
 </head>
-
 <body>
-  <div class="container">
     <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>Welcome to my website! I am a professional psychologist with years of experience helping individuals overcome
-          mental health challenges. My mission is to provide a safe and supportive environment for my clients to explore
-          their feelings and develop effective coping strategies.</p>
-        <p>Whether you're struggling with anxiety, depression, or any other psychological issue, I'm here to help. I
-          utilize evidence-based therapies and tailor my approach to meet the unique needs of each individual.</p>
-      </section>
-
-      <section id="services">
-        <h2>Services</h2>
-        <ul>
-          <li><strong>Individual Therapy:</strong> One-on-one counseling sessions to address personal challenges and promote
-            self-growth.</li>
-          <li><strong>Couples Counseling:</strong> Assistance for couples looking to improve communication, resolve conflicts,
-            and strengthen their relationship.</li>
-          <li><strong>Group Therapy:</strong> Supportive group sessions where individuals can share experiences, gain insights,
-            and foster connections with others facing similar issues.</li>
-          <li><strong>Psychological Assessments:</strong> Comprehensive assessments to evaluate cognitive abilities, emotional
-            functioning, and personality traits.</li>
-        </ul>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>If you're ready to take the first step towards a happier and healthier life, don't hesitate to reach out. You can
-          contact me using the information below:</p>
-        <ul>
-          <li><strong>Email:</strong> info@psychologistprofessional.com</li>
-          <li><strong>Phone:</strong> +1 123-456-7890</li>
-          <li><strong>Address:</strong> 123 Main Street, City, State, ZIP</li>
-        </ul>
-      </section>
+        <section id="home">
+            <h1>Welcome to my portfolio</h1>
+            <img src="profile.jpg" alt="Profile Picture">
+            <p>I am a full stack developer with a passion for building scalable and user-friendly applications. With a strong background in computer science and experience in software development, I am confident in my ability to deliver high-quality solutions.</p>
+            <p>Feel free to explore my portfolio and learn more about my skills and experience. If you have any questions or would like to get in touch, don't hesitate to reach out.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a highly motivated and detail-oriented full stack developer with a passion for building scalable and user-friendly applications. With a strong background in computer science and experience in software development, I am confident in my ability to deliver high-quality solutions.</p>
+            <p>I am always looking to improve my skills and stay up-to-date with the latest technologies and trends in the industry. When I'm not coding, you can find me reading books, watching movies, or playing video games.</p>
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Git</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+                <li><a href="#">Project 4</a></li>
+                <li><a href="#">Project 5</a></li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to get in touch, feel free to reach out to me through the following channels:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/your_profile">Facebook Profile</a></li>
+                <li><a href="https://www.instagram.com/your_profile">Instagram Profile</a></li>
+                <li><a href="mailto:your_email@example.com">Email</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=your_phone_number">WhatsApp</a></li>
+            </ul>
+        </section>
     </main>
-
     <footer>
-      <p>&copy; 2024 Psychologist Professional. All rights reserved.</p>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
-  </div>
 </body>
-
 </html>
