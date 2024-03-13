@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <script>
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+    
+        function smoothScroll() {
+            const targetSection = event.target.closest('section');
+            const targetSectionId = targetSection.id;
+            const targetSectionTop = targetSection.offsetTop;
+    
+            window.scrollTo({
+                top: targetSectionTop,
+                behavior: 'smooth'
+            });
+        }
+    
+        navLinks.forEach((link) => {
+            link.addEventListener('click', smoothScroll);
+        });
+    </script>
     <style>
       /* Global Styles */
       * {
