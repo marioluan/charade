@@ -11,6 +11,17 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #FFFFFF; /* White */
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
     }
 
     header {
@@ -36,7 +47,6 @@
     }
 
     main {
-      background-color: #FFFFFF; /* White */
       padding: 20px;
     }
 
@@ -66,55 +76,57 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Welcome to my website! I am a professional psychologist with years of experience helping individuals overcome
-        mental health challenges. My mission is to provide a safe and supportive environment for my clients to explore
-        their feelings and develop effective coping strategies.</p>
-      <p>Whether you're struggling with anxiety, depression, or any other psychological issue, I'm here to help. I
-        utilize evidence-based therapies and tailor my approach to meet the unique needs of each individual.</p>
-    </section>
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>Welcome to my website! I am a professional psychologist with years of experience helping individuals overcome
+          mental health challenges. My mission is to provide a safe and supportive environment for my clients to explore
+          their feelings and develop effective coping strategies.</p>
+        <p>Whether you're struggling with anxiety, depression, or any other psychological issue, I'm here to help. I
+          utilize evidence-based therapies and tailor my approach to meet the unique needs of each individual.</p>
+      </section>
 
-    <section id="services">
-      <h2>Services</h2>
-      <ul>
-        <li><strong>Individual Therapy:</strong> One-on-one counseling sessions to address personal challenges and promote
-          self-growth.</li>
-        <li><strong>Couples Counseling:</strong> Assistance for couples looking to improve communication, resolve conflicts,
-          and strengthen their relationship.</li>
-        <li><strong>Group Therapy:</strong> Supportive group sessions where individuals can share experiences, gain insights,
-          and foster connections with others facing similar issues.</li>
-        <li><strong>Psychological Assessments:</strong> Comprehensive assessments to evaluate cognitive abilities, emotional
-          functioning, and personality traits.</li>
-      </ul>
-    </section>
+      <section id="services">
+        <h2>Services</h2>
+        <ul>
+          <li><strong>Individual Therapy:</strong> One-on-one counseling sessions to address personal challenges and promote
+            self-growth.</li>
+          <li><strong>Couples Counseling:</strong> Assistance for couples looking to improve communication, resolve conflicts,
+            and strengthen their relationship.</li>
+          <li><strong>Group Therapy:</strong> Supportive group sessions where individuals can share experiences, gain insights,
+            and foster connections with others facing similar issues.</li>
+          <li><strong>Psychological Assessments:</strong> Comprehensive assessments to evaluate cognitive abilities, emotional
+            functioning, and personality traits.</li>
+        </ul>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>If you're ready to take the first step towards a happier and healthier life, don't hesitate to reach out. You can
-        contact me using the information below:</p>
-      <ul>
-        <li><strong>Email:</strong> info@psychologistprofessional.com</li>
-        <li><strong>Phone:</strong> +1 123-456-7890</li>
-        <li><strong>Address:</strong> 123 Main Street, City, State, ZIP</li>
-      </ul>
-    </section>
-  </main>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>If you're ready to take the first step towards a happier and healthier life, don't hesitate to reach out. You can
+          contact me using the information below:</p>
+        <ul>
+          <li><strong>Email:</strong> info@psychologistprofessional.com</li>
+          <li><strong>Phone:</strong> +1 123-456-7890</li>
+          <li><strong>Address:</strong> 123 Main Street, City, State, ZIP</li>
+        </ul>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2024 Psychologist Professional. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2024 Psychologist Professional. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 
 </html>
